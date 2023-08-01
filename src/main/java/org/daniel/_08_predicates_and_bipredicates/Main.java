@@ -1,4 +1,4 @@
-package org.daniel._04_functions_and_functions_chaining;
+package org.daniel._08_predicates_and_bipredicates;
 
 import java.util.List;
 import java.util.function.Predicate;
