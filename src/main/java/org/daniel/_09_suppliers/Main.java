@@ -1,4 +1,4 @@
-package org.daniel._05_bifunctions;
+package org.daniel._09_suppliers;
 
 import java.util.List;
 import java.util.function.Predicate;
