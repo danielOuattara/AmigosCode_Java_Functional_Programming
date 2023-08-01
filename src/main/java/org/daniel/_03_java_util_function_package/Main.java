@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+
+enum Gender {
+    MALE, FEMALE
+}
 public class Main {
     public static void main(String[] args) {
 
@@ -20,7 +24,7 @@ public class Main {
 
         System.out.println("--------------------- DECLARATIVE --------------------- ");
 
-        // a predicate, from the Java Documentation
+        // uses predicate, from the Java Documentation
         Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
         List<Person> females2 = people.stream()
                 .filter(personPredicate)
@@ -50,9 +54,4 @@ public class Main {
                     '}';
         }
     }
-
-    enum Gender {
-        MALE, FEMALE
-    }
-
 }

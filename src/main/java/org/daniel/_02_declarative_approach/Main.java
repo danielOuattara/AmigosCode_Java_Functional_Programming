@@ -1,8 +1,12 @@
 package org.daniel._02_declarative_approach;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+
+enum Gender {
+    MALE, FEMALE
+}
 
 public class Main {
     public static void main(String[] args) {
@@ -28,8 +32,8 @@ public class Main {
         List<Person> females2 = people.stream()
                 .filter(person -> Gender.FEMALE.equals(person.gender))
                 .collect(Collectors.toList());
-        females2.forEach(System.out::println);
 
+        females2.forEach(System.out::println);
 
         //-----------------------------------------------------------------------------
 
@@ -53,9 +57,4 @@ public class Main {
                     '}';
         }
     }
-
-    enum Gender {
-        MALE, FEMALE
-    }
-
 }

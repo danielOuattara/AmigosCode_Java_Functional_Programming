@@ -34,11 +34,9 @@ public class _Functions_and_BiFunctions {
 
         int incrementAndMultiplyBiFunction = incrementBy1AndThenMultiplyBy10BiFunction.apply(2, 4);
         System.out.println("incrementAndMultiplyBiFunction = " + incrementAndMultiplyBiFunction);
-
-
     }
 
-    // method  + imperative
+    // method + imperative
     static int incrementByOneMethod(int number) {
         return number + 1;
     }
@@ -62,8 +60,5 @@ public class _Functions_and_BiFunctions {
 
     static BiFunction<Integer, Integer, Integer> incrementBy1AndThenMultiplyBy10BiFunction =
             (numberToIncrementByOne, numberToMultiplyBy10) -> (numberToIncrementByOne + 1) * numberToMultiplyBy10;
-
-    /*
-    ----------------------------------*/
 
 }

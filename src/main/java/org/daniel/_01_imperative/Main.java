@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+enum Gender {
+    MALE, FEMALE
+}
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,9 +24,9 @@ public class Main {
         // imperative solution : how to find the number of FEMALE ?
         List<Person> females = new ArrayList<>();
 
-        for (Person singPerson : people) {
-            if (Gender.FEMALE.equals(singPerson.gender)) {
-                females.add(singPerson);
+        for (Person singlePerson : people) {
+            if (Gender.FEMALE.equals(singlePerson.gender)) {
+                females.add(singlePerson);
             }
         }
         // System.out.println(females);
@@ -52,8 +57,5 @@ public class Main {
         }
     }
 
-    enum Gender {
-        MALE, FEMALE
-    }
 
 }

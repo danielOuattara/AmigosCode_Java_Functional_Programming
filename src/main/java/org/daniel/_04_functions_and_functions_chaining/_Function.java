@@ -20,7 +20,6 @@ public class _Function {
 
         int incrementAndMultiply = addBy1AndThenMultiplyBy10.apply(4);
         System.out.println("incrementAndMultiply = " + incrementAndMultiply);
-
     }
 
 
