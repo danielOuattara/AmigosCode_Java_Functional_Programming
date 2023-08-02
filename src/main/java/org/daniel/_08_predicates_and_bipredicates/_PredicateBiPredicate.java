@@ -30,11 +30,12 @@ public class _PredicateBiPredicate {
         System.out.println("------------------------------------------ 4");
     }
 
+    //------------------ imperative approach ------------------------
     static boolean isPhoneNumberValid(String phoneNumber) {
         return phoneNumber.startsWith("07") && phoneNumber.length() == 7;
     }
 
-    // single predicate
+    // ------------------ single predicate --------------------------
     static Predicate<String> isPhoneNumberValidPredicate =
             phoneNumber -> phoneNumber.startsWith("07") && phoneNumber.length() == 7;
 

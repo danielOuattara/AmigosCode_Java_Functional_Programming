@@ -22,10 +22,12 @@ public class Main {
 
         // a predicate, from the Java Documentation
         Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
-        List<Person> females2 = people.stream()
+
+        List<Person> femaleList = people.stream()
                 .filter(personPredicate)
-                .collect(Collectors.toList());
-        females2.forEach(System.out::println);
+                .toList();
+
+        femaleList.forEach(System.out::println);
 
 
         //-----------------------------------------------------------------------------

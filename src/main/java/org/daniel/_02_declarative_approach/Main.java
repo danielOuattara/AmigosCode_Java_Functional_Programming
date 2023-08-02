@@ -29,11 +29,11 @@ public class Main {
 
         // OR
 
-        List<Person> females2 = people.stream()
+        List<Person> femalesList = people.stream()
                 .filter(person -> Gender.FEMALE.equals(person.gender))
                 .collect(Collectors.toList());
 
-        females2.forEach(System.out::println);
+        femalesList.forEach(System.out::println);
 
         //-----------------------------------------------------------------------------
 

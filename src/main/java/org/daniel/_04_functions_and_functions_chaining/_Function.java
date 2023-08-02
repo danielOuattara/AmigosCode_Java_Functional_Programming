@@ -33,7 +33,7 @@ public class _Function {
             incrementByOneFunction.andThen(multiplyBy10Function);
 
 
-    // method  + imperative
+    // method + imperative
     static int incrementByOneMethod(int number) {
         return number + 1;
     }

@@ -7,33 +7,21 @@ public class _BiConsumer {
     public static void main(String[] args) {
         Customer maria = new Customer("Maria", "777-555-333");
 
-        // Normal Function
-        greetCustomer(maria);
-        System.out.println("------------------------------------------1");
-
-        // Consumer Functional Interface
-        greetCustomerWithConsumer.accept(maria);
-        System.out.println("------------------------------------------ 2");
-
         // Normal Function 2 arguments
         greetCustomer2Args(maria, false);
-        System.out.println("------------------------------------------ 3");
+        System.out.println("------------------------------------------ 1");
 
         // BiConsumer Functional Interface
         greetCustomerWithBiConsumer.accept(maria, true);
 
-        System.out.println("------------------------------------------ 4");
+        System.out.println("------------------------------------------ 2");
         // BiConsumer Functional Interface
         greetCustomerWithBiConsumer.accept(maria, false);
-        System.out.println("------------------------------------------ 5");
+        System.out.println("------------------------------------------ 3");
     }
 
-    static void greetCustomer(Customer customer) {
-        System.out.println("Hello " + customer.customerName +
-                " thanks for registering  phone number " +
-                customer.customerPhoneNumber);
-    }
 
+    //------------------ imperative approach ------------------------
     static void greetCustomer2Args(Customer customer, boolean showPhoneNumber) {
         System.out.println("Hello " + customer.customerName +
                 " thanks for registering  phone number " + (
@@ -41,11 +29,7 @@ public class _BiConsumer {
         );
     }
 
-
-    static Consumer<Customer> greetCustomerWithConsumer = customer ->
-            System.out.println("Hello " + customer.customerName +
-                    " thanks for registering  phone number " +
-                    customer.customerPhoneNumber);
+    // ----------------- functional approach -------------------------
     static BiConsumer<Customer, Boolean> greetCustomerWithBiConsumer = (customer, showPhoneNumber) ->
             System.out.println("Hello " + customer.customerName +
                     " thanks for registering  phone number " + (

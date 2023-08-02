@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 enum Gender {
     MALE, FEMALE
 }
+
 public class Main {
     public static void main(String[] args) {
 
@@ -26,10 +27,12 @@ public class Main {
 
         // uses predicate, from the Java Documentation
         Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
-        List<Person> females2 = people.stream()
+
+        List<Person> femaleList = people.stream()
                 .filter(personPredicate)
                 .collect(Collectors.toList());
-        females2.forEach(System.out::println);
+
+        femaleList.forEach(System.out::println);
 
 
         //-----------------------------------------------------------------------------
